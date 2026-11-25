@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thamar Support</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 20px 60px; color: #10231E; background: #F3F6F4; line-height: 1.6; }
+  h1 { font-size: 1.7rem; margin-bottom: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 28px; }
+  a { color: #0F4C3F; font-weight: 600; }
+  section[lang="ar"] { direction: rtl; text-align: right; }
+</style>
+</head>
+<body>
+  <h1>Thamar ثمر — Support</h1>
+
+  <section>
+    <h2>Need help or found a problem?</h2>
+    <p>Open a request here: <a id="issues" href="#">Thamar support requests</a>. Please describe what you did and what happened. Never include your real amounts, certificate numbers or backup password.</p>
+    <h2>Common questions</h2>
+    <p><b>Where is my data?</b> Only on your phone. Thamar has no server and no account.</p>
+    <p><b>I changed phones.</b> Make a backup in Thamar (Settings → Backup), save the file to Files or iCloud Drive, then restore it on the new phone with the same password.</p>
+    <p><b>I forgot my backup password.</b> It is never stored, so the backup cannot be opened without it. Make a new backup on your phone.</p>
+    <p><b>Reminders don't arrive.</b> Check that notifications for Thamar are on in the iPhone's Settings.</p>
+    <p><a href="privacy.html">Privacy policy</a></p>
+  </section>
+
+  <section lang="ar">
+    <h2>الدعم</h2>
+    <p>لأي مساعدة أو مشكلة، افتح طلبًا من <a id="issues-ar" href="#">صفحة طلبات الدعم</a>. لا تكتب مبالغك الحقيقية أو أرقام الشهادات أو كلمة مرور النسخة الاحتياطية.</p>
+    <p>بياناتك موجودة على هاتفك فقط. لنقلها إلى هاتف جديد: اعمل نسخة احتياطية من الإعدادات واسترجعها على الهاتف الجديد بنفس كلمة المرور.</p>
+  </section>
+
+  <script>
+    // Works on any https://USER.github.io/REPO/ address: points to that repo's Issues page.
+    (function () {
+      var user = location.hostname.split('.')[0];
+      var repo = location.pathname.split('/').filter(Boolean)[0] || '';
+      var url = 'https://github.com/' + user + '/' + repo + '/issues';
+      document.getElementById('issues').href = url;
+      document.getElementById('issues-ar').href = url;
+    })();
+  </script>
+</body>
+</html>
